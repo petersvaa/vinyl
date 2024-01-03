@@ -1,0 +1,50 @@
+:root {
+    --background-color: #2a2a2a;
+    --background-color-similar: #424242;
+    --text-color: #EAE6E5;
+}
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+main {
+    width: 100%;
+    min-width: 50vw;
+    max-width: 60rem;
+}
+img {
+    width: 100%;
+}
+button {
+    border: 0;
+    color: black;
+    padding: 0.8rem 3rem;
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+.btn-primary {
+    background-color: #FF5A5F;
+    transition: all 0.1s ease-out;
+}
+.btn-primary:hover {
+    background-color: #ff7378;
+}
+.bg-primary {
+    background-color: #FF5A5F;
+    transition: all 0.1s ease-out;
+}
+.bg-primary:hover {
+    background-color: #ff7378;
+}
+.color-secondary {
+    background-color: #3bf2ff;
+    transition: all 0.1s ease-out;
+}
+.color-secondary:hover {
+    background-color: #4ad8e2;
+}

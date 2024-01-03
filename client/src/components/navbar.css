@@ -1,0 +1,14 @@
+nav{
+    display: flex;
+    justify-content: center;
+}
+.nav-link{
+    text-decoration: none;
+    color: #3bf2ff;
+}
+.nav-link:hover{
+    color: #42d5e0;
+}
+.nav-link-wrapper{
+    padding: 0 1rem;
+}
