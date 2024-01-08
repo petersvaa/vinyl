@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom"
 import { useState, useEffect, useContext } from 'react'
 import './record.css'
-import { CartContext } from "../App"
 
 export default function Record() {
     const { hook } = useParams()
@@ -25,16 +24,8 @@ export default function Record() {
         getRecordData();
     }, [])
 
-    const addToCart = async () => {
-        const data = {
-            items: [record.id]
-        }
-        const response = await fetch('http://localhost:3000/order/submit',{
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        }).then(res => res.json())
-        console.log(response)
+    const addToCart = () => {
+        window.location.href = '/complete-order/' + record.id
     }
 
     return (
@@ -52,7 +43,7 @@ export default function Record() {
                         </div>
                         <div>
                             <h3>€{record.price.toFixed(2)}</h3>
-                            <button onClick={addToCart} id="order-button" className="btn-primary">Add to Cart</button>
+                            <button onClick={addToCart} id="order-button" className="btn-primary">Objednať</button>
                         </div>
                     </div>
                 </div>

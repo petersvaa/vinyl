@@ -2,6 +2,14 @@
     --background-color: #2a2a2a;
     --background-color-similar: #424242;
     --text-color: #EAE6E5;
+    --color-secondary: #3bf2ff;
+}
+a{
+    color: #3bf2ff;
+    text-decoration: none;
+}
+a:hover {
+    color: #4ad8e2;
 }
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -32,7 +40,7 @@ button {
     transition: all 0.1s ease-out;
 }
 .btn-primary:hover {
-    background-color: #ff7378;
+    background-color: #f24f55;
 }
 .bg-primary {
     background-color: #FF5A5F;
@@ -47,4 +55,15 @@ button {
 }
 .color-secondary:hover {
     background-color: #4ad8e2;
+}
+input{
+    background: #585858;
+    color: white;
+    border: 0;
+    padding: 0.5rem 0.7rem;
+    font-size: 1rem;
+    outline: none;
+}
+input:focus{
+    border-bottom: solid var(--color-secondary) 0.1rem;
 }

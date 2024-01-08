@@ -4,7 +4,7 @@ var con = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "TOTOjemysql.37",
-  database: 'records',
+  database: 'vinyl',
 });
 
 con.connect((err:any) => {

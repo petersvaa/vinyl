@@ -16,8 +16,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 import indexRouter from './routes/index'
 import recordsRouter from './routes/records'
+import ordersRouter from './routes/orders'
 
 app.use('/', indexRouter);
 app.use('/records', recordsRouter);
+app.use('/orders', ordersRouter);
 
 export default app;

@@ -1,0 +1,27 @@
+.name-wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.6rem;
+}
+.address-wrapper{
+    display: flex;
+    gap: 0.6rem;
+}
+.address-wrapper > .postal-code{
+    width: 30%;
+}
+form{
+    width: 50%;
+}
+input{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0.3rem 0;
+}
+input[type='radio']{
+    width: auto;
+    margin: 0 0.2rem;
+}
+.form-fields{
+    margin: 0 0 2rem 0;
+}

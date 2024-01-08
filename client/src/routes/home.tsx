@@ -20,7 +20,6 @@ export default function Home() {
         return (
         <Link to={'/records/' + record.hook} className="record-wrapper" key={record.id} >
             <img className="cover-image" src={record.cover} />
-            <img className="record-image" src={recordImage} />
         </Link>
         );
     })

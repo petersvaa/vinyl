@@ -7,6 +7,7 @@ export default function SubmitRecord() {
     const [description, setDescription] = useState('')
     const [price, setPrice] = useState('')
     const [cover, setCover] = useState('')
+    const [hook, setHook] = useState('')
 
     const generateHook = (_cover: string) => {
         var str = _cover.split('.')[0]
@@ -14,8 +15,6 @@ export default function SubmitRecord() {
     }
     const submit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-
-        const hook = generateHook(cover)
         let _cover;
         if(cover.startsWith('.')) {
             _cover = '/records/' + hook + cover
@@ -35,18 +34,18 @@ export default function SubmitRecord() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
         }).then(res => res.json())
-        console.log(response)
     }
 
     return (
         <>
             <form onSubmit={submit}>
-                <input placeholder="artist" type="text" value={artist} onChange={e => setArtist(e.target.value)} />
-                <input placeholder="album" type="text" value={album} onChange={e => setAlbum(e.target.value)} />
-                <input placeholder="description" type="text" value={description} onChange={e => setDescription(e.target.value)} />
-                <input placeholder="price" type="text" value={price} onChange={e => setPrice(e.target.value)} />
-                <input placeholder="cover" type="text" value={cover} onChange={e => setCover(e.target.value)} />
-                <input type="submit" />
+                <input placeholder="Umelec" type="text" value={artist} onChange={e => setArtist(e.target.value)} />
+                <input placeholder="Album" type="text" value={album} onChange={e => setAlbum(e.target.value)} />
+                <input placeholder="Popis" type="text" value={description} onChange={e => setDescription(e.target.value)} />
+                <input placeholder="Cena" type="text" value={price} onChange={e => setPrice(e.target.value)} />
+                <input placeholder="Cover" type="text" value={cover} onChange={e => setCover(e.target.value)} />
+                <input placeholder="Hook" type="text" value={hook} onChange={e => setHook(e.target.value)} />
+                <button className="btn-primary" type="submit">Odoslať</button>
             </form>
         </>
     )

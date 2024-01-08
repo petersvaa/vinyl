@@ -8,12 +8,11 @@
     z-index: 0;
     width: 50%;
     position: relative;
-    transition: all 0.25s ease-in-out;
+    transition: all 0.05s ease-in-out;
     margin: 0rem 0rem 2rem 0rem;
-    box-shadow: 5px 5px 5px gray;
 }
 .record-wrapper:hover {
-    --border-color: #8eb6d8;    
+    opacity: 75%;  
 }
 .cover-image {
     width: 100%;
