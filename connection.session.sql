@@ -51,5 +51,7 @@ CREATE TABLE cart_items(
     FOREIGN KEY (record_id) REFERENCES records(id)
 );
 
---@block 
-UPDATE records SET description='The Division Bell je štrnásty štúdiový album anglickej progresívnej rockovej skupiny Pink Floyd, ktorý vyšiel 28. marca 1994 vo vydavateľstve EMI Records v Spojenom kráľovstve a 4. apríla v Columbia Records v Spojených štátoch.';
+--@block
+DELETE FROM cart_items;
+DELETE FROM orders;
+DELETE FROM records;
