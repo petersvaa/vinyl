@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import './home.css'
+import api from "../api"
 import { Link } from "react-router-dom"
 import recordImage from '../assets/images/record.png'
 
@@ -8,7 +9,7 @@ export default function Home() {
     
 
     const getRecordsData = async () => {
-        const response = await fetch('http://localhost:3000/records').then(response => response.json())
+        const response = await api.get('/records').then(response => response.data)
         setRecords(response)
     }
 
@@ -26,7 +27,8 @@ export default function Home() {
 
     return (
         <>
-            <h1>Home</h1>
+            <h1>Domov</h1>
+            <h3>Produkty ({recordsItems.length})</h3>
             <div className="records-library">
                 {recordsItems}
             </div>

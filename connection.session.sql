@@ -14,8 +14,12 @@ SELECT * FROM records;
 
 --@block
 UPDATE records
-SET hook = 'metallica-ride-the-lightning'
-WHERE id = 4;
+SET artist = 'AC/DC',
+album = 'Back in Black',
+price = '27.99',
+description = 'Album od austrálskej hard-rockovej skupiny AC/DC.'
+
+WHERE id = 28;
 
 --@block
 CREATE TABLE orders(

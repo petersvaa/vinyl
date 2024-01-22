@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import { useState, useEffect, useContext } from 'react'
 import './record.css'
+import api from "../api"
 
 export default function Record() {
     const { hook } = useParams()
@@ -16,7 +17,7 @@ export default function Record() {
     })
 
     const getRecordData = async () => {
-        const response = await fetch('http://localhost:3000/records/' + hook).then(response => response.json())
+        const response = await api.get('/records/' + hook).then(response => response.data)
         setRecord(response)
     }
 

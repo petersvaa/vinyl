@@ -16,7 +16,7 @@ export default function Navbar() {
                     <Link className="nav-link" to="/">Domov</Link>
                 </div>
                 <div className="nav-link-wrapper">
-                    <Link className="nav-link" to="/cart">Košík ({cartContext.length})</Link>
+                    <Link className="nav-link" to="/cart">Košík (0)</Link>
                 </div>
             </nav>
         </>

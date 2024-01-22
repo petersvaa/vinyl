@@ -1,6 +1,7 @@
 import './completeOrder.css'
 import { FormEvent, useState } from "react";
 import { useParams } from "react-router-dom";
+import api from '../api';
 
 export default function CompleteOrder(){
     const { id } = useParams()
@@ -27,12 +28,9 @@ export default function CompleteOrder(){
 
             items: [id]
         }
-        const response = await fetch('http://localhost:3000/orders/submit',{
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        }).then(res => res.json())
-        alert('Objednávka bola úspešne odoslaná.')
+        const response = await api.post('/orders/submit', data
+        ).then(res => res.data)
+        alert('Objednávka bola úspešne odoslaná. Číslo objednávky: ' + response.id)
     }
     return (
         <>

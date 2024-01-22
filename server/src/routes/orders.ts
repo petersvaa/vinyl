@@ -61,8 +61,8 @@ router.post('/submit', function(req, res, next) {
       ]
       con.query('INSERT INTO cart_items(record_id, order_id) VALUES ?', [[itemValues]], (err, results) => {
         if(err) throw err;
-  
-        res.json({message: 'OK'}).status(201)
+        
+        res.json({message: 'OK', id:orderId}).status(201)
       })
     })
   })
